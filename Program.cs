@@ -137,14 +137,14 @@ namespace SendMailFramework
             using (SmtpClient smtpclient = new SmtpClient("smtp.163.com"))
             {
                 //填补邮件信息
-                mailmessage.To.Add("sunppazsj@163.com");
+                mailmessage.To.Add("*@163.com");
                 //mailmessage.To.Add(diz);//可以有多个
                 mailmessage.Body = msg;
-                mailmessage.From = new MailAddress("xianbin1016@163.com");
+                mailmessage.From = new MailAddress("*@163.com");
                 mailmessage.Subject = title;
                 smtpclient.UseDefaultCredentials = true;
                 smtpclient.EnableSsl = true;
-                smtpclient.Credentials = new System.Net.NetworkCredential("xianbin1016", "zxb2872067");
+                smtpclient.Credentials = new System.Net.NetworkCredential("*6", "*");
                 smtpclient.Send(mailmessage);//发送
             }
         }
